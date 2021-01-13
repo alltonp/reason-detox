@@ -7,6 +7,7 @@
     "reason",
     "reasonml",
     "bucklescript",
+    "rescript",
     "reason-react-native",
     "detox"
   ],
@@ -25,7 +26,6 @@
     "reason-react": "^0.9.0",
     "reason-react-native": "^0.63.0"
   },
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "private": false
 }
