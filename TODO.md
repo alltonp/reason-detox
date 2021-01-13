@@ -1,0 +1,2 @@
+- make bs-jest a dep?
+- make detox a dep?

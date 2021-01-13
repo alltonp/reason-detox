@@ -1,0 +1,31 @@
+{
+  "name": "reason-detox",
+  "version": "17.6.1-1",
+  "repository": "https://github.com/alltonp/reason-detox.git",
+  "license": "MIT",
+  "keywords": [
+    "reason",
+    "reasonml",
+    "bucklescript",
+    "reason-react-native",
+    "detox"
+  ],
+  "files": [
+    "*",
+    "!.merlin",
+    "!lib"
+  ],
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "watch": "bsb -make-world -w",
+    "build": "bsb -make-world"
+  },
+  "devDependencies": {
+    "bs-platform": "^5.0.4",
+    "reason-react": "^0.9.0",
+    "reason-react-native": "^0.63.0"
+  },
+  "peerDependencies": {
+  },
+  "private": false
+}
