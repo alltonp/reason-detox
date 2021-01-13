@@ -17,9 +17,9 @@
     "!lib"
   ],
   "scripts": {
-    "clean": "bsb -clean-world",
-    "watch": "bsb -make-world -w",
-    "build": "bsb -make-world"
+    "re:clean": "bsb -clean-world",
+    "re:watch": "bsb -make-world -w",
+    "re:build": "bsb -clean-world -make-world"
   },
   "devDependencies": {
     "bs-platform": "^5.0.4",
