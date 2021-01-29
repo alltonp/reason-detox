@@ -1,5 +1,15 @@
 # reason-detox
 
+## what
+
+[Reasonml/Rescript](https://rescript-lang.org) bindings for the [Detox](https://github.com/wix/Detox) end-to-end testing framework.
+
+## why
+- you are using [reason-react-native](https://reason-react-native.github.io) and want to write end-to-end test's without introducing js 
+- you are using plain old React Native and want to try introducing Reasonml in a lightweight way 
+
+## how
+
 ### pre-installation
 - install detox for jest as per the [standard instructions](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md)
 - *ensure you can successfully run a standard detox test before continuing*   
@@ -29,7 +39,6 @@ yarn add https://github.com/alltonp/reason-detox
   "node_modules/(?!(jest-)?react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|bs-platform|(@[a-zA-Z]+/)?(bs|reason|rescript)-(.*)+)"
 ]
 ```
-   
 - run `npm install --save-dev bs-let` and add `"ppx-flags": ["bs-let/ppx"]` to `bsconfig.json`
 - that's it!
 
