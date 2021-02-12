@@ -8,6 +8,9 @@
 - you are using [reason-react-native](https://reason-react-native.github.io) and want to write end-to-end test's without introducing js 
 - you are using plain old React Native and want to try introducing Reasonml in a lightweight way 
 
+## status
+- experimental but definitely usable, building blocks are there just needs a few more primitives adding
+
 ## how
 
 ### pre-installation
