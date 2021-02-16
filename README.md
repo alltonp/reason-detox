@@ -21,8 +21,8 @@
 1. install reason-detox
     ```bash
     yarn add --dev jest
-    npm install --save-dev @glennsl/bs-jest
-    npm install --save-dev bs-let
+    yarn add --dev @glennsl/bs-jest
+    yarn add --dev bs-let
     yarn add --dev https://github.com/alltonp/reason-detox
     ```
 1. in `bsconfig.json`
