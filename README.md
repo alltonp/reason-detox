@@ -2,7 +2,7 @@
 
 ## what
 
-[Reasonml/Rescript](https://rescript-lang.org) bindings for the [Detox](https://github.com/wix/Detox) end-to-end testing framework.
+[Reasonml/Rescript](https://rescript-lang.org) bindings for the [Detox](https://github.com/wix/Detox) end-to-end testing framework. See [here](https://github.com/alltonp/reason-react-native-detox-tea) for a complete example project using this library.
 
 ## why
 - you are using [reason-react-native](https://reason-react-native.github.io) and want to write end-to-end test's without introducing js 
