@@ -18,35 +18,34 @@
 - *ensure you can successfully run a standard detox test before continuing*   
 
 ### installation
-- install reason-detox
-```bash
-yarn add https://github.com/alltonp/reason-detox
-```
-- add `reason-detox` to `bsconfig.json`
-```json
-"bs-dependencies": ["reason-detox"]
-```
-
-- in `bsconfig.json` add new source:
-    ```json
-    {
-       "dir": "e2e",
-       "type": "dev"
-    }
+1. install reason-detox
+    ```bash
+    yarn add --dev jest
+    npm install --save-dev @glennsl/bs-jest
+    npm install --save-dev bs-let
+    yarn add --dev https://github.com/alltonp/reason-detox
     ```
-   
-- update `e2e/config.json` with:
-```json
-"testRegex": "\\Test\\.js$|\\Test\\.bs.js$",
-"transformIgnorePatterns": [
-  "node_modules/(?!(jest-)?react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|bs-platform|(@[a-zA-Z]+/)?(bs|reason|rescript)-(.*)+)"
-]
-```
-- run `npm install --save-dev bs-let` and add `"ppx-flags": ["bs-let/ppx"]` to `bsconfig.json`
-- that's it!
+1. in `bsconfig.json`
+    1. add `"@glennsl/bs-jest", "reason-detox"` to `"bs-dependencies"`
+    1. add `"ppx-flags": ["bs-let/ppx"]`
+    1. add to `"sources"`:
+      ```json
+      {
+        "dir": "e2e",
+        "type": "dev"
+      }
+      ```
+1. update `e2e/config.json` with:
+    ```json
+      "testRegex": "\\Test\\.bs.js$",
+      "transformIgnorePatterns": [
+        "node_modules/(?!(jest-)?react-native|react-(native|universal|navigation)-(.*)|@react-native-community/(.*)|@react-navigation/(.*)|bs-platform|(@[a-zA-Z]+/)?(bs|reason|rescript)-(.*)+)"
+      ]
+    ```
+1. that's it!
 
 ### creating a test
-- save the following in `e2e/TheTest.re` 
+- save the following in `e2e/firstTest.re` 
 ```Reason
 open Jest;
 open ReasonDetox;
@@ -68,7 +67,7 @@ describe("The Test", () => {
 ```
 
 ### run the test
-- `detox test -f e2e/TheTest.bs.js` 
+- `detox test -f e2e/firstTest.bs.js` 
 
 ### running all tests
 - `detox test`
