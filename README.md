@@ -20,10 +20,7 @@
 ### installation
 1. install reason-detox
     ```bash
-    yarn add --dev jest
-    yarn add --dev @glennsl/bs-jest
-    yarn add --dev bs-let
-    yarn add --dev https://github.com/alltonp/reason-detox
+    yarn add --dev jest @glennsl/bs-jest bs-let https://github.com/alltonp/reason-detox
     ```
 1. in `bsconfig.json`
     1. add `"@glennsl/bs-jest", "reason-detox"` to `"bs-dependencies"`
