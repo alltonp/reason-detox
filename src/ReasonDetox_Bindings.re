@@ -17,8 +17,16 @@ external doTypeTextId: (~id: string, ~value: string) => Js.Promise.t(unit) =
   "detox_element_id_typeText";
 
 [@bs.module "./ReasonDetox.js"]
-external doExpectToBeVisible: (~text: string) => Js.Promise.t(unit) =
+external doExpectToBeVisibleText: (~text: string) => Js.Promise.t(unit) =
   "detox_expect_text_toBeVisible";
+
+[@bs.module "./ReasonDetox.js"]
+external doExpectToBeVisibleId: (~id: string) => Js.Promise.t(unit) =
+  "detox_expect_id_toBeVisible";
+
+[@bs.module "./ReasonDetox.js"]
+external doExpectToExistId: (~id: string) => Js.Promise.t(unit) =
+  "detox_expect_id_toExist";
 
 [@bs.module "./ReasonDetox.js"]
 external doExpectToHaveText:

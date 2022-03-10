@@ -5,10 +5,26 @@ module Expect = {
   open Matchers;
   open ReasonDetox_Bindings;
 
-  //TODO: should take a by
-  let expectToBeVisible = text =>
+  let expectToBeVisible = by =>
     Js.Promise.(
-      doExpectToBeVisible(~text)
+      (
+        switch (by) {
+        | Text(v) => doExpectToBeVisibleText(~text=v)
+        | Id(v) => doExpectToBeVisibleId(~id=v)
+        }
+      )
+      |> catch(err => {err->raiseError})
+      |> then_(_ => {resolve()})
+    );
+
+  let expectToExist = by =>
+    Js.Promise.(
+      (
+        switch (by) {
+        | Text(_v) => raise(Failure({reason: "Unsupported"}))
+        | Id(v) => doExpectToExistId(~id=v)
+        }
+      )
       |> catch(err => {err->raiseError})
       |> then_(_ => {resolve()})
     );
